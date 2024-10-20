@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periodic Table-SMIT</title>
+<style>
+  table{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+  }
+  .Hydrogen{
+background-color: #E2EEFF;
+color: #0060F0;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;
+  }
+  .Helium,.Neon,.Argon,.Krypton,.Xenon,.Radon{
+background-color: #FFE7EB;
+color: #D53B73;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;
+  }
+  .Helium:hover,.Neon:hover,.Argon:hover,.Krypton:hover,.Xenon:hover,.Radon:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Helium:hover .hsub,.Neon:hover .hsub,.Argon:hover .hsub,.Krypton:hover .hsub,.Xenon:hover .hsub,.Radon:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}  
+  .Lithium,.Sodium,.potassium,.Rubidium,.Caesium,.Francium{
+background-color: #D8F8FF;
+color: #3998AB;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;
+  }
+  .Lithium:hover,.Sodium:hover,.potassium:hover,.Rubidium:hover,.Caesium:hover,.Francium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Lithium:hover .hsub,.Sodium:hover .hsub,.potassium:hover .hsub,.Rubidium:hover .hsub,.Caesium:hover .hsub,.Francium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+  .Beryllium,.Magnesium,.Calcium,.Strontium,.Barium,.Radium{
+background-color: #FDE6E6;
+color: #D2203D;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;
+  }
+  .Beryllium:hover,.Magnesium:hover,.Calcium:hover,.Strontium:hover,.Barium:hover,.Radium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Beryllium:hover .hsub ,.Magnesium:hover .hsub ,.Calcium:hover .hsub ,.Strontium:hover .hsub ,.Barium:hover .hsub ,.Radium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+  .Scandium,.Yttrium,.Titanium,.Vanadium,.Chromium,.Manganese,.Iron,.Cobalt,.Nickel,.Copper,.Zinc
+  ,.Zirconium,.Niobium,.Molybdenum,.Technetium,.Ruthenium,.Rhodium,.Palladium,.Silver,.Cadmium
+  ,.Hafnium,.Tantalum,.Tungsten,.Rhenium,.Osmium,.Iridium,.Platinum,.Gold,.Mercury,.Rutherfordium
+  ,.Dubnium,.Seaborgium,.Bohrium,.Hassium{
+background-color: #F3E8FD;
+color: #8861F0;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;
+  }
+  .Scandium:hover,.Yttrium:hover,.Titanium:hover,.Vanadium:hover,.Chromium:hover,.Manganese:hover,.Iron:hover,.Cobalt:hover,.Nickel:hover,.Copper:hover,.Zinc:hover
+  ,.Zirconium:hover,.Niobium:hover,.Molybdenum:hover,.Technetium:hover,.Ruthenium:hover,.Rhodium:hover,.Palladium:hover,.Silver:hover,.Cadmium:hover
+  ,.Hafnium:hover,.Tantalum:hover,.Tungsten:hover,.Rhenium:hover,.Osmium:hover,.Iridium:hover,.Platinum:hover,.Gold:hover,.Mercury:hover,.Rutherfordium:hover
+  ,.Dubnium:hover,.Seaborgium:hover,.Bohrium:hover,.Hassium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+} 
+.Scandium:hover .hsub,.Yttrium:hover .hsub,.Titanium:hover .hsub,.Vanadium:hover .hsub,.Chromium:hover .hsub,.Manganese:hover .hsub,.Iron:hover .hsub,.Cobalt:hover .hsub,.Nickel:hover .hsub,.Copper:hover .hsub,.Zinc:hover .hsub
+  ,.Zirconium:hover .hsub,.Niobium:hover .hsub,.Molybdenum:hover .hsub,.Technetium:hover .hsub,.Ruthenium:hover .hsub,.Rhodium:hover .hsub,.Palladium:hover .hsub,.Silver:hover .hsub,.Cadmium:hover .hsub
+  ,.Hafnium:hover .hsub,.Tantalum:hover .hsub,.Tungsten:hover .hsub,.Rhenium:hover .hsub,.Osmium:hover .hsub,.Iridium:hover .hsub,.Platinum:hover .hsub,.Gold:hover .hsub,.Mercury:hover .hsub,.Rutherfordium:hover .hsub
+  ,.Dubnium:hover .hsub,.Seaborgium:hover .hsub,.Bohrium:hover .hsub,.Hassium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+  .Lanthanum{
+background-color: #DFF3FF;
+color: #3F6985;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;
+  }
+  .Lanthanum:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+} 
+.Lanthanum:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+  .Actinium{
+  background-color: #FFE6D4;
+  color: #D15326;
+  text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;  
+  }
+  .Actinium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+} 
+.Actinium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Boron,.Silicon,.Germanium,.Arsenic,.Antimony,.Tellurium{
+  background-color: #FEF7E0;
+  color: #A9762C;
+  text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;   
+}
+.Boron:hover,.Silicon:hover,.Germanium:hover,.Arsenic:hover,.Antimony:hover,.Tellurium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Boron:hover .hsub,.Silicon:hover .hsub,.Germanium:hover .hsub,.Arsenic:hover .hsub,.Antimony:hover .hsub,.Tellurium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Carbon,.Nitrogen,.Oxygen,.Fluorine,.Phosphorus,.Sulfur,.Chlorine,.Selenium,.Bromine,.Iodine{
+  background-color: #E2EEFF;
+  color: #3984F4;
+  text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;   
+}
+.Carbon:hover,.Nitrogen:hover,.Oxygen:hover,.Fluorine:hover,.Phosphorus:hover,.Sulfur:hover,.Chlorine:hover,.Selenium:hover,.Bromine:hover,.Iodine:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+} 
+.Carbon:hover .hsub,.Nitrogen:hover .hsub,.Oxygen:hover .hsub,.Fluorine:hover .hsub,.Phosphorus:hover .hsub,.Sulfur:hover .hsub,.Chlorine:hover .hsub,.Selenium:hover .hsub,.Bromine:hover .hsub,.Iodine:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Aluminium,.Gallium,.Indium,.Tin,.Thallium,.Lead,.Bismuth,.Polonium,.Astatine{
+background-color: #D6F9E8;
+color: #164118;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;   
+} 
+.Aluminium:hover ,.Gallium:hover ,.Indium:hover ,.Tin:hover ,.Thallium:hover ,.Lead:hover ,.Bismuth:hover ,.Polonium:hover,.Astatine:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Aluminium:hover .hsub,.Gallium:hover .hsub,.Indium:hover .hsub,.Tin:hover .hsub,.Thallium:hover .hsub,.Lead:hover .hsub,.Bismuth:hover .hsub,.Polonium:hover .hsub,.Astatine:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Meitnerium,.Darmstadtium,.Roentgenium,.Copernicium,.Nihonium,.Flerovium,.Moscovium
+,.Livermorium,.Tennessine
+,.Oganesson
+{ 
+background-color: #E7E7EA;
+color: #443C53;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif; 
+}
+.Meitnerium:hover,.Darmstadtium:hover,.Roentgenium:hover,.Copernicium:hover,.Nihonium:hover,.Flerovium:hover,.Moscovium:hover
+,.Livermorium:hover,.Tennessine:hover
+,.Oganesson:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Meitnerium:hover .hsub,.Darmstadtium:hover .hsub,.Roentgenium:hover .hsub,.Copernicium:hover .hsub,.Nihonium:hover .hsub,.Flerovium:hover .hsub,.Moscovium:hover .hsub
+,.Livermorium:hover .hsub,.Tennessine:hover .hsub
+,.Oganesson:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Cerium,.Praseodymium,.Neodymium,.Promethium,.Samarium,.Europium,.Gadolinium
+,.Terbium,.Dysprosium,.Holmium
+,.Erbium
+,.Thulium
+,.Ytterbium
+,.Lutetium
+{
+background-color: #DFF3FF;
+color: #1F4E6D;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;  
+}
+
+.Cerium:hover,.Praseodymium:hover,.Neodymium:hover,.Promethium:hover,.Samarium:hover,.Europium:hover,.Gadolinium:hover
+,.Terbium:hover,.Dysprosium:hover,.Holmium:hover
+,.Erbium:hover
+,.Thulium:hover
+,.Ytterbium:hover
+,.Lutetium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Cerium:hover .hsub,.Praseodymium:hover .hsub,.Neodymium:hover .hsub,.Promethium:hover .hsub,.Samarium:hover .hsub,.Europium:hover .hsub,.Gadolinium:hover .hsub
+,.Terbium:hover .hsub,.Dysprosium:hover .hsub,.Holmium:hover .hsub
+,.Erbium:hover .hsub
+,.Thulium:hover .hsub
+,.Ytterbium:hover .hsub
+,.Lutetium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+
+.Thorium,.Protactinium,.Uranium,.Neptunium,.Plutonium
+,.Americium
+,.Curium
+,.Berkelium
+,.Californium
+,.Einsteinium
+,.Fermium
+,.Mendelevium
+,.Nobelium
+,.Lawrencium
+{
+background-color: #FFE6D4;
+color: #D2562B;
+text-align: center;
+padding: 4px;
+border-radius: 4px;
+font-size: 20px;
+width: 50px;
+line-height: 14px;
+font-family: Arial, sans-serif;    
+}
+.Thorium:hover,.Protactinium:hover,.Uranium:hover,.Neptunium:hover,.Plutonium:hover
+,.Americium:hover
+,.Curium:hover
+,.Berkelium:hover
+,.Californium:hover
+,.Einsteinium:hover
+,.Fermium:hover
+,.Mendelevium:hover
+,.Nobelium:hover
+,.Lawrencium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+.Thorium:hover .hsub,.Protactinium:hover .hsub,.Uranium:hover .hsub,.Neptunium:hover .hsub,.Plutonium:hover .hsub
+,.Americium:hover .hsub
+,.Curium:hover .hsub
+,.Berkelium:hover .hsub
+,.Californium:hover .hsub
+,.Einsteinium:hover .hsub
+,.Fermium:hover .hsub
+,.Mendelevium:hover .hsub
+,.Nobelium:hover .hsub
+,.Lawrencium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Thorium:hover .hsub,.Protactinium:hover .hsub,.Uranium:hover .hsub,.Neptunium:hover .hsub,.Plutonium:hover .hsub
+,.Americium:hover .hsub
+,.Curium:hover .hsub
+,.Berkelium:hover .hsub
+,.Californium:hover .hsub
+,.Einsteinium:hover .hsub
+,.Fermium:hover .hsub
+,.Mendelevium:hover .hsub
+,.Nobelium:hover .hsub
+,.Lawrencium:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+.Thorium:hover,.Protactinium:hover,.Uranium:hover,.Neptunium:hover,.Plutonium:hover
+,.Americium:hover
+,.Curium:hover
+,.Berkelium:hover
+,.Californium:hover
+,.Einsteinium:hover
+,.Fermium:hover
+,.Mendelevium:hover
+,.Nobelium:hover
+,.Lawrencium:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b4b4b4;
+}
+
+  td{
+    width: 70px !important; 
+    cursor: pointer;
+  }
+ 
+  .Hydrogen {
+  
+    transition: transform 0.3s ease; /* Zoom effect */
+ 
+}
+
+.hsub {
+    visibility: hidden; /* Hide by default */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+}
+
+.Hydrogen:hover .hsub {
+    visibility: visible;
+    opacity: 1; /* Show on hover */
+}
+
+.Hydrogen:hover {
+    transform: scale(1.4); /* Zoom effect on hover */
+    box-shadow: #b6b6b6;
+}
+.space{
+  width: 5%; 
+} 
+h1{
+  text-align: center;
+  font-size: 22px;
+  font-family: Arial, sans-serif; 
+} 
+a{
+  cursor: pointer;
+  color: #3984F4;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.circle{
+background-color: #d2f4fc;
+border: 3px solid#69B5C5;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+
+display: inline-block;
+}
+.circle-aem{
+  background-color:#FDE6E6;
+border: 3px solid#D2203D;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+
+display: inline-block;
+}
+.circle-tm{
+  background-color:#F3E8FD;
+border: 3px solid#9a73fd;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+
+display: inline-block;
+}
+.circle-ptm{
+  background-color:#D6F9E8;
+border: 3px solid#638B6C;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+
+display: inline-block;
+}
+.circle-m{
+  background-color:#FEF7E0;
+border: 3px solid#BC9355;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+
+display: inline-block;
+}
+.circle-rnm{
+  background-color:#E2EEFF;
+border: 3px solid#74abfd;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+display: inline-block;
+
+}
+.circle-ng{
+background-color:#FFE7EB;
+border: 3px solid#E27299;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+display: inline-block;
+}
+.circle-l{
+background-color:#DFF3FF;
+border: 3px solid#598099;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+display: inline-block; 
+}
+.circle-a{
+  background-color:#FFE6D4;
+border: 3px solid#DC7752;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+display: inline-block;
+}
+.circle-up{
+  background-color:#E7E7EA;
+border: 3px solid#544C62;
+border-radius: 50%;
+width: 13px;
+height: 13px;
+display: inline-block; 
+}
+
+.element-knows {
+    text-align: left;
+    font-family: Arial, sans-serif;
+    display:flex;
+    /* padding-left: 50px; */
+    /* padding-right: 0px; */
+    padding-bottom: 20px;
+    align-content: center;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 20px !important;
+    text-align: left;
+}
+
+</style>
+</head>
+<body>
+ 
+  <table>
+    <thead>
+    <h1>Periodic Table SMIT Assignment</h1>
+    </thead>
+  <tbody>
+    <!-- section 1 -->
+  <tr>
+  
+    <td class="Hydrogen">
+      <span style="float: left;font-size: 10px;">1</span>
+      <span class="hsub" style="float: right;font-size: 10px;">1.0078</span>
+      <br>
+    H
+      <br>
+      <span style="font-size: 10px;">Hydrogen</span>
+    </td>
+    <td></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td></td>
+    <td class="space"></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td class="Helium">
+      <span style="float: left;font-size: 10px;">2</span>
+      <span class="hsub" style="float: right;font-size: 10px;">4.0026
+      </span>
+      <br>
+    He
+      <br>
+      <span style="font-size: 10px;">Helium</span>
+    </td>
+    
+  </tr>
+  <!-- section 1 end -->
+
+<!-- ************* -->
+
+<!-- section 2 -->
+  <tr>
+  
+    <td class="Lithium">
+      <span style="float: left;font-size: 10px;">3</span>
+      <span class="hsub" style="float: right;font-size: 10px;">6.9410
+      </span>
+      <br>
+    Li
+      <br>
+      <span style="font-size: 10px;">Lithium</span>
+    </td>
+    <td class="Beryllium">
+      <span style="float: left;font-size: 10px;">4</span>
+      <span class="hsub" style="float: right;font-size: 10px;">9.0122</span>
+      <br>
+    Be
+      <br>
+      <span style="font-size: 10px;">Beryllium</span>
+    </td>
+    <td style=""></td>
+    <td style=""></td>
+    <td class="space"></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td style=""></td>
+    <td class="Boron">
+      <span style="float: left;font-size: 10px;">5</span>
+      <span class="hsub" style="float: right;font-size: 10px;">10.811</span>
+      <br>
+    B
+      <br>
+      <span style="font-size: 10px;">Boron</span>
+    </td>
+    <td class="Carbon">
+      <span style="float: left;font-size: 10px;">6</span>
+      <span class="hsub" style="float: right;font-size: 10px;">12.011</span>
+      <br>
+    C
+      <br>
+      <span style="font-size: 10px;">Carbon</span>
+    </td>
+    <td class="Nitrogen">
+      <span style="float: left;font-size: 10px;">7</span>
+      <span class="hsub" style="float: right;font-size: 10px;">14.007</span>
+      <br>
+    N
+      <br>
+      <span style="font-size: 10px;">Nitrogen</span>
+    </td>
+    <td class="Oxygen">
+      <span style="float: left;font-size: 10px;">8</span>
+      <span class="hsub" style="float: right;font-size: 10px;">15.999</span>
+      <br>
+    O
+      <br>
+      <span style="font-size: 10px;">Oxygen</span>
+    </td>
+    <td class="Fluorine">
+      <span style="float: left;font-size: 10px;">9</span>
+      <span class="hsub" style="float: right;font-size: 10px;">18.998</span>
+      <br>
+    F
+      <br>
+      <span style="font-size: 10px;">Fluorine</span>
+    </td>
+    <td class="Neon">
+      <span style="float: left;font-size: 10px;">10</span>
+      <span class="hsub" style="float: right;font-size: 10px;">20.180</span>
+      <br>
+    N
+      <br>
+      <span style="font-size: 10px;">Neon</span>
+    </td>
+    
+  </tr>
+<!-- section 2 end -->
+
+<!-- ************* -->
+
+<!-- section 3 -->
+<tr>
+  
+  <td class="Sodium">
+    <span style="float: left;font-size: 10px;">11</span>
+    <span class="hsub" style="float: right;font-size: 10px;">22.990</span>
+    <br>
+  Na
+    <br>
+    <span style="font-size: 10px;">Sodium</span>
+  </td>
+  <td class="Magnesium">
+    <span style="float: left;font-size: 10px;">12</span>
+    <span class="hsub" style="float: right;font-size: 10px;">24.305</span>
+    <br>
+  Mg
+    <br>
+    <span style="font-size: 10px;">Magnesium</span>
+  </td>
+  <td></td>
+  <td></td>
+  <td class="space"></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="Aluminium">
+    <span style="float: left;font-size: 10px;">13</span>
+    <span class="hsub" style="float: right;font-size: 10px;">26.982</span>
+    <br>
+  Al
+    <br>
+    <span style="font-size: 10px;">Aluminium</span>
+  </td>
+  <td class="Silicon">
+    <span style="float: left;font-size: 10px;">14</span>
+    <span class="hsub" style="float: right;font-size: 10px;">28.086</span>
+    <br>
+  S
+    <br>
+    <span style="font-size: 10px;">Silicon</span>
+  </td>
+  <td class="Phosphorus">
+    <span style="float: left;font-size: 10px;">15</span>
+    <span class="hsub" style="float: right;font-size: 10px;">30.974</span>
+    <br>
+  P
+    <br>
+    <span style="font-size: 10px;">Phosphorus</span>
+  </td>
+  <td class="Sulfur">
+    <span style="float: left;font-size: 10px;">16</span>
+    <span class="hsub" style="float: right;font-size: 10px;">32.065</span>
+    <br>
+  S
+    <br>
+    <span style="font-size: 10px;">Sulfur</span>
+  </td>
+  <td class="Chlorine">
+    <span style="float: left;font-size: 10px;">17</span>
+    <span class="hsub" style="float: right;font-size: 10px;">35.453</span>
+    <br>
+  Cl
+    <br>
+    <span style="font-size: 10px;">Chlorine</span>
+  </td>
+   
+  
+  
+  <td class="Argon">
+    <span style="float: left;font-size: 10px;">18</span>
+    <span class="hsub" style="float: right;font-size: 10px;">39.948</span>
+    <br>
+  Ar
+    <br>
+    <span style="font-size: 10px;">Argon</span>
+  </td>
+  
+</tr>
+<!-- section 3 end -->
+
+<!-- ************* -->
+
+<!-- section 4 -->
+<tr>
+  
+  <td class="potassium">
+    <span style="float: left;font-size: 10px;">19</span>
+    <span class="hsub" style="float: right;font-size: 10px;">39.098    </span>
+    <br>
+  K
+    <br>
+    <span style="font-size: 10px;">Potassium</span>
+  </td>
+  <td class="Calcium">
+    <span style="float: left;font-size: 10px;">20</span>
+    <span class="hsub" style="float: right;font-size: 10px;">40.078</span>
+    <br>
+  Ca
+    <br>
+    <span style="font-size: 10px;">Calcium</span>
+  </td>
+  <td class="Scandium">
+    <span style="float: left;font-size: 10px;">21</span>
+    <span class="hsub" style="float: right;font-size: 10px;">44.956</span>
+    <br>
+  Sc
+    <br>
+    <span style="font-size: 10px;">Scandium</span>
+  </td>
+
+  <td class="space"></td>
+  <td class="Titanium">
+    <span style="float: left;font-size: 10px;">22</span>
+    <span class="hsub" style="float: right;font-size: 10px;">47.867
+    </span>
+    <br>
+  Ti
+    <br>
+    <span style="font-size: 10px;">Titanium</span>
+  </td>
+  <td class="Vanadium">
+    <span style="float: left;font-size: 10px;">23</span>
+    <span class="hsub" style="float: right;font-size: 10px;">50.942
+    </span>
+    <br>
+  V
+    <br>
+    <span style="font-size: 10px;">Vanadium</span>
+  </td>
+  <td class="Chromium">
+    <span style="float: left;font-size: 10px;">24</span>
+    <span class="hsub" style="float: right;font-size: 10px;">51.996
+    </span>
+    <br>
+  Cr
+    <br>
+    <span style="font-size: 10px;">Chromium</span>
+  </td>
+  <td class="Manganese">
+    <span style="float: left;font-size: 10px;">25</span>
+    <span class="hsub" style="float: right;font-size: 10px;">54.938
+    </span>
+    <br>
+  Mn
+    <br>
+    <span style="font-size: 10px;">Manganese</span>
+  </td>
+  <td class="Iron">
+    <span style="float: left;font-size: 10px;">26</span>
+    <span class="hsub" style="float: right;font-size: 10px;">55.845
+    </span>
+    <br>
+  Fe
+    <br>
+    <span style="font-size: 10px;">Iron</span>
+  </td>
+  <td class="Cobalt">
+    <span style="float: left;font-size: 10px;">27</span>
+    <span class="hsub" style="float: right;font-size: 10px;">58.933
+    </span>
+    <br>
+  Co
+    <br>
+    <span style="font-size: 10px;">Cobalt</span>
+  </td>
+  <td class="Nickel">
+    <span style="float: left;font-size: 10px;">28</span>
+    <span class="hsub" style="float: right;font-size: 10px;">58.693
+    </span>
+    <br>
+  Ni
+    <br>
+    <span style="font-size: 10px;">Nickel</span>
+  </td>
+  <td class="Copper">
+    <span style="float: left;font-size: 10px;">29</span>
+    <span class="hsub" style="float: right;font-size: 10px;">63.546
+    </span>
+    <br>
+  Cu
+    <br>
+    <span style="font-size: 10px;">Copper</span>
+  </td>
+  <td class="Zinc">
+    <span style="float: left;font-size: 10px;">30</span>
+    <span class="hsub" style="float: right;font-size: 10px;">65.380
+    </span>
+    <br>
+  Zn
+    <br>
+    <span style="font-size: 10px;">Zinc</span>
+  </td>
+  <td class="Gallium">
+    <span style="float: left;font-size: 10px;">31</span>
+    <span class="hsub" style="float: right;font-size: 10px;">69.723
+    </span>
+    <br>
+  Ga
+    <br>
+    <span style="font-size: 10px;">Gallium</span>
+  </td>
+
+  <td class="Germanium">
+    <span style="float: left;font-size: 10px;">32</span>
+    <span class="hsub" style="float: right;font-size: 10px;">72.640
+    </span>
+    <br>
+  Ge
+    <br>
+    <span style="font-size: 10px;">Germanium</span>
+  </td>
+  <td class="Arsenic">
+    <span style="float: left;font-size: 10px;">33</span>
+    <span class="hsub" style="float: right;font-size: 10px;">74.922
+    </span>
+    <br>
+  As
+    <br>
+    <span style="font-size: 10px;">Arsenic</span>
+  </td> 
+  
+  <td class="Selenium">
+    <span style="float: left;font-size: 10px;">34</span>
+    <span class="hsub" style="float: right;font-size: 10px;">78.960
+    </span>
+    <br>
+  Se
+    <br>
+    <span style="font-size: 10px;">Selenium</span>
+  </td>  
+  
+  <td class="Bromine">
+    <span style="float: left;font-size: 10px;">35</span>
+    <span class="hsub" style="float: right;font-size: 10px;">79.904
+    </span>
+    <br>
+  Br
+    <br>
+    <span style="font-size: 10px;">Bromine</span>
+  </td>  
+  <td class="Krypton">
+    <span style="float: left;font-size: 10px;">36</span>
+    <span class="hsub" style="float: right;font-size: 10px;"> 83.798
+    </span>
+    <br>
+  Kr
+    <br>
+    <span style="font-size: 10px;">Krypton</span>
+  </td>
+  
+</tr>
+<!-- section 4 end -->
+
+<!-- section 5 -->
+<tr>
+  
+  <td class="Rubidium">
+    <span style="float: left;font-size: 10px;">37</span>
+    <span class="hsub" style="float: right;font-size: 10px;">85.468</span>
+    <br>
+  Rb
+    <br>
+    <span style="font-size: 10px;">Rubidium</span>
+  </td>
+  <td class="Strontium">
+    <span style="float: left;font-size: 10px;">38</span>
+    <span class="hsub" style="float: right;font-size: 10px;">87.620</span>
+    <br>
+  Sr
+    <br>
+    <span style="font-size: 10px;">Strontium</span>
+  </td>
+  <td class="Yttrium">
+    <span style="float: left;font-size: 10px;">39</span>
+    <span class="hsub" style="float: right;font-size: 10px;">88.906</span>
+    <br>
+  Y
+    <br>
+    <span style="font-size: 10px;">Yttrium</span>
+  </td>
+  <td class="space"></td>
+  <td class="Zirconium">
+    <span style="float: left;font-size: 10px;">40</span>
+    <span class="hsub" style="float: right;font-size: 10px;">91.224
+    </span>
+    <br>
+  Zr
+    <br>
+    <span style="font-size: 10px;">Zirconium</span>
+  </td>
+<td class="Niobium">
+    <span style="float: left;font-size: 10px;">41</span>
+    <span class="hsub" style="float: right;font-size: 10px;">92.906
+    </span>
+    <br>
+  Nb
+    <br>
+    <span style="font-size: 10px;">Niobium</span>
+  </td>
+  <td class="Molybdenum">
+    <span style="float: left;font-size: 10px;">42</span>
+    <span class="hsub" style="float: right;font-size: 10px;">95.950
+    </span>
+    <br>
+  Mo
+    <br>
+    <span style="font-size: 10px;">Molybdenum</span>
+  </td>  
+  <td class="Technetium">
+    <span style="float: left;font-size: 10px;">43</span>
+    <span class="hsub" style="float: right;font-size: 10px;">98
+    </span>
+    <br>
+  Tc
+    <br>
+    <span style="font-size: 10px;">Technetium</span>
+  </td> 
+  <td class="Ruthenium">
+    <span style="float: left;font-size: 10px;">44</span>
+    <span class="hsub" style="float: right;font-size: 10px;">101.07
+    </span>
+    <br>
+  Ru
+    <br>
+    <span style="font-size: 10px;">Ruthenium</span>
+  </td> 
+  <td class="Rhodium">
+    <span style="float: left;font-size: 10px;">45</span>
+    <span class="hsub" style="float: right;font-size: 10px;">102.91
+    </span>
+    <br>
+  Rh
+    <br>
+    <span style="font-size: 10px;">Rhodium</span>
+  </td> 
+  <td class="Palladium">
+    <span style="float: left;font-size: 10px;">46</span>
+    <span class="hsub" style="float: right;font-size: 10px;">106.42
+    </span>
+    <br>
+    Pd
+    <br>
+    <span style="font-size: 10px;">Palladium</span>
+  </td> 
+  <td class="Silver">
+    <span style="float: left;font-size: 10px;">47</span>
+    <span class="hsub" style="float: right;font-size: 10px;">107.87
+    </span>
+    <br>
+    Ag
+    <br>
+    <span style="font-size: 10px;">Silver</span>
+  </td> 
+  <td class="Cadmium">
+    <span style="float: left;font-size: 10px;">48</span>
+    <span class="hsub" style="float: right;font-size: 10px;">112.41
+    </span>
+    <br>
+    Cd
+    <br>
+    <span style="font-size: 10px;">Cadmium</span>
+  </td> 
+  <td class="Indium">
+    <span style="float: left;font-size: 10px;">49</span>
+    <span class="hsub" style="float: right;font-size: 10px;">114.82
+    </span>
+    <br>
+    In
+    <br>
+    <span style="font-size: 10px;">Indium</span>
+  </td>
+  <td class="Tin">
+    <span style="float: left;font-size: 10px;">50</span>
+    <span class="hsub" style="float: right;font-size: 10px;">118.71
+    </span>
+    <br>
+    Sn
+    <br>
+    <span style="font-size: 10px;">Tin</span>
+  </td>
+  <td class="Antimony">
+    <span style="float: left;font-size: 10px;">51</span>
+    <span class="hsub" style="float: right;font-size: 10px;">121.76
+    </span>
+    <br>
+    Sb
+    <br>
+    <span style="font-size: 10px;">Antimony</span>
+  </td>
+  <td class="Tellurium">
+    <span style="float: left;font-size: 10px;">52</span>
+    <span class="hsub" style="float: right;font-size: 10px;">127.60
+    </span>
+    <br>
+    Te
+    <br>
+    <span style="font-size: 10px;">Tellurium</span>
+  </td>
+  <td class="Iodine">
+    <span style="float: left;font-size: 10px;">53</span>
+    <span class="hsub" style="float: right;font-size: 10px;">126.90
+    </span>
+    <br>
+    I
+    <br>
+    <span style="font-size: 10px;">Iodine</span>
+  </td>
+  <td class="Xenon">
+    <span style="float: left;font-size: 10px;">54</span>
+    <span class="hsub" style="float: right;font-size: 10px;">131.29
+    </span>
+    <br>
+    Xe
+    <br>
+    <span style="font-size: 10px;">Xenon</span>
+  </td>        
+</tr>
+<!-- section 5 end -->
+
+<!-- section 6 -->
+<tr>
+  
+  <td class="Caesium">
+    <span style="float: left;font-size: 10px;">55</span>
+    <span class="hsub" style="float: right;font-size: 10px;">132.91</span>
+    <br>
+  Cs
+    <br>
+    <span style="font-size: 10px;">Caesium</span>
+  </td>
+  <td class="Barium">
+    <span style="float: left;font-size: 10px;">56</span>
+    <br>
+  Ba
+    <br>
+    <span style="font-size: 10px;">Barium</span>
+    <span class="hsub" style="float: right;font-size: 10px;">137.33</span>
+  </td>
+  <td class="Lanthanum">
+    <span style="float: left;font-size: 10px;">57</span>
+    <span class="hsub" style="float: right;font-size: 10px;">138.91</span>
+    <br>
+  La
+    <br>
+    <span style="font-size: 10px;">Lanthanum</span>
+  </td>
+  <td class="space"></td>
+  <td class="Hafnium">
+    <span style="float: left;font-size: 10px;">72</span>
+    <span class="hsub" style="float: right;font-size: 10px;">178.49</span>
+   
+
+    <br>
+  La
+    <br>
+    <span style="font-size: 10px;">Hafnium</span>
+  </td>
+  <td class="Tantalum">
+    <span style="float: left;font-size: 10px;">73</span>
+    <span class="hsub" style="float: right;font-size: 10px;">180.95</span>
+    <br>
+    Ta
+    <br>
+    <span style="font-size: 10px;">Tantalum</span>
+</td>
+
+<td class="Tungsten">
+    <span style="float: left;font-size: 10px;">74</span>
+    <span class="hsub" style="float: right;font-size: 10px;">183.84</span>
+    <br>
+    W
+    <br>
+    <span style="font-size: 10px;">Tungsten</span>
+</td>
+
+<td class="Rhenium">
+    <span style="float: left;font-size: 10px;">75</span>
+    <span class="hsub" style="float: right;font-size: 10px;">186.21</span>
+    <br>
+    Re
+    <br>
+    <span style="font-size: 10px;">Rhenium</span>
+</td>
+
+<td class="Osmium">
+    <span style="float: left;font-size: 10px;">76</span>
+    <span class="hsub" style="float: right;font-size: 10px;">190.23</span>
+    <br>
+    Os
+    <br>
+    <span style="font-size: 10px;">Osmium</span>
+</td>
+
+<td class="Iridium">
+    <span style="float: left;font-size: 10px;">77</span>
+    <span class="hsub" style="float: right;font-size: 10px;">192.22</span>
+    <br>
+    Ir
+    <br>
+    <span style="font-size: 10px;">Iridium</span>
+</td>
+
+<td class="Platinum">
+    <span style="float: left;font-size: 10px;">78</span>
+    <span class="hsub" style="float: right;font-size: 10px;">195.08</span>
+    <br>
+    Pt
+    <br>
+    <span style="font-size: 10px;">Platinum</span>
+</td>
+
+<td class="Gold">
+    <span style="float: left;font-size: 10px;">79</span>
+    <span class="hsub" style="float: right;font-size: 10px;">196.97</span>
+    <br>
+    Au
+    <br>
+    <span style="font-size: 10px;">Gold</span>
+</td>
+
+<td class="Mercury">
+    <span style="float: left;font-size: 10px;">80</span>
+    <span class="hsub" style="float: right;font-size: 10px;">200.59</span>
+    <br>
+    Hg
+    <br>
+    <span style="font-size: 10px;">Mercury</span>
+</td>
+
+<td class="Thallium">
+    <span style="float: left;font-size: 10px;">81</span>
+    <span class="hsub" style="float: right;font-size: 10px;">204.38</span>
+    <br>
+    Tl
+    <br>
+    <span style="font-size: 10px;">Thallium</span>
+</td>
+
+<td class="Lead">
+    <span style="float: left;font-size: 10px;">82</span>
+    <span class="hsub" style="float: right;font-size: 10px;">207.2</span>
+    <br>
+    Pb
+    <br>
+    <span style="font-size: 10px;">Lead</span>
+</td>
+
+<td class="Bismuth">
+    <span style="float: left;font-size: 10px;">83</span>
+    <span class="hsub" style="float: right;font-size: 10px;">208.98</span>
+    <br>
+    Bi
+    <br>
+    <span style="font-size: 10px;">Bismuth</span>
+</td>
+
+<td class="Polonium">
+    <span style="float: left;font-size: 10px;">84</span>
+    <span class="hsub" style="float: right;font-size: 10px;">209</span>
+    <br>
+    Po
+    <br>
+    <span style="font-size: 10px;">Polonium</span>
+</td>
+
+<td class="Astatine">
+    <span style="float: left;font-size: 10px;">85</span>
+    <span class="hsub" style="float: right;font-size: 10px;">210</span>
+    <br>
+    At
+    <br>
+    <span style="font-size: 10px;">Astatine</span>
+</td>
+
+<td class="Radon">
+    <span style="float: left;font-size: 10px;">86</span>
+    <span class="hsub" style="float: right;font-size: 10px;">222</span>
+    <br>
+    Rn
+    <br>
+    <span style="font-size: 10px;">Radon</span>
+</td> 
+</tr>
+<!-- section 6 end -->
+
+<!-- section 7 -->
+<tr>
+  
+  <td class="Francium">
+    <span style="float: left;font-size: 10px;">87</span>
+    <span class="hsub" style="float: right;font-size: 10px;">223</span>
+    <br>
+  Fr
+    <br>
+    <span style="font-size: 10px;">Francium</span>
+  </td>
+  <td class="Radium">
+    <span style="float: left;font-size: 10px;">88</span>
+    <span class="hsub" style="float: right;font-size: 10px;">226</span>
+    
+    <br>
+  Ra
+    <br>
+    <span style="font-size: 10px;">Radium</span>
+    <span class="hsub" style="float: right;font-size: 10px;">227</span>
+  </td>
+  <td class="Actinium">
+    <span style="float: left;font-size: 10px;">89</span>
+    <br>
+  Ac
+    <br>
+    <span style="font-size: 10px;">Actinium</span>
+  </td>
+  <td class="space"></td>
+  <td class="Dubnium">
+    <span style="float: left;font-size: 10px;">105</span>
+    <span class="hsub" style="float: right;font-size: 10px;">268</span>
+    <br>
+    Db
+    <br>
+    <span style="font-size: 10px;">Dubnium</span>
+</td>
+  <td class="Rutherfordium">
+    <span style="float: left;font-size: 10px;">104</span>
+    <span class="hsub" style="float: right;font-size: 10px;">267</span>
+    <br>
+    Rf
+    <br>
+    <span style="font-size: 10px;">Rutherfordium</span>
+</td>
+
+<td class="Seaborgium">
+    <span style="float: left;font-size: 10px;">106</span>
+    <span class="hsub" style="float: right;font-size: 10px;">271</span>
+    <br>
+    Sg
+    <br>
+    <span style="font-size: 10px;">Seaborgium</span>
+</td>
+
+<td class="Bohrium">
+    <span style="float: left;font-size: 10px;">107</span>
+    <span class="hsub" style="float: right;font-size: 10px;">270</span>
+    <br>
+    Bh
+    <br>
+    <span style="font-size: 10px;">Bohrium</span>
+</td>
+
+<td class="Hassium">
+    <span style="float: left;font-size: 10px;">108</span>
+    <span class="hsub" style="float: right;font-size: 10px;">277</span>
+    <br>
+    Hs
+    <br>
+    <span style="font-size: 10px;">Hassium</span>
+</td>
+
+<td class="Meitnerium">
+    <span style="float: left;font-size: 10px;">109</span>
+    <span class="hsub" style="float: right;font-size: 10px;">278</span>
+    <br>
+    Mt
+    <br>
+    <span style="font-size: 10px;">Meitnerium</span>
+</td>
+
+<td class="Darmstadtium">
+    <span style="float: left;font-size: 10px;">110</span>
+    <span class="hsub" style="float: right;font-size: 10px;">281</span>
+    <br>
+    Ds
+    <br>
+    <span style="font-size: 10px;">Darmstadtium</span>
+</td>
+
+<td class="Roentgenium">
+    <span style="float: left;font-size: 10px;">111</span>
+    <span class="hsub" style="float: right;font-size: 10px;">282</span>
+    <br>
+    Rg
+    <br>
+    <span style="font-size: 10px;">Roentgenium</span>
+</td>
+
+<td class="Copernicium">
+    <span style="float: left;font-size: 10px;">112</span>
+    <span class="hsub" style="float: right;font-size: 10px;">285</span>
+    <br>
+    Cn
+    <br>
+    <span style="font-size: 10px;">Copernicium</span>
+</td>
+
+<td class="Nihonium">
+    <span style="float: left;font-size: 10px;">113</span>
+    <span class="hsub" style="float: right;font-size: 10px;">286</span>
+    <br>
+    Nh
+    <br>
+    <span style="font-size: 10px;">Nihonium</span>
+</td>
+
+<td class="Flerovium">
+    <span style="float: left;font-size: 10px;">114</span>
+    <span class="hsub" style="float: right;font-size: 10px;">289</span>
+    <br>
+    Fl
+    <br>
+    <span style="font-size: 10px;">Flerovium</span>
+</td>
+
+<td class="Moscovium">
+    <span style="float: left;font-size: 10px;">115</span>
+    <span class="hsub" style="float: right;font-size: 10px;">290</span>
+    <br>
+    Mc
+    <br>
+    <span style="font-size: 10px;">Moscovium</span>
+</td>
+
+<td class="Livermorium">
+    <span style="float: left;font-size: 10px;">116</span>
+    <span class="hsub" style="float: right;font-size: 10px;">293</span>
+    <br>
+    Lv
+    <br>
+    <span style="font-size: 10px;">Livermorium</span>
+</td>
+
+<td class="Tennessine">
+    <span style="float: left;font-size: 10px;">117</span>
+    <span class="hsub" style="float: right;font-size: 10px;">294</span>
+    <br>
+    Ts
+    <br>
+    <span style="font-size: 10px;">Tennessine</span>
+</td>
+
+<td class="Oganesson">
+    <span style="float: left;font-size: 10px;">118</span>
+    <span class="hsub" style="float: right;font-size: 10px;">294</span>
+    <br>
+    Og
+    <br>
+    <span style="font-size: 10px;">Oganesson</span>
+</td>
+</tr>
+<!-- section 7 end -->
+<!-- section 8 -->
+<tr>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td class="space"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+  <td style="height: 30px;"></td>
+</tr>
+<!-- section 8 end -->
+<!-- section 9 -->
+ <tr>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td class="space"></td>
+  <td class="Cerium">
+    <span style="float: left;font-size: 10px;">58</span>
+    <span class="hsub" style="float: right;font-size: 10px;">140.12</span>
+    <br>
+    Ce
+    <br>
+    <span style="font-size: 10px;">Cerium</span>
+</td>
+
+<td class="Praseodymium">
+    <span style="float: left;font-size: 10px;">59</span>
+    <span class="hsub" style="float: right;font-size: 10px;">140.91</span>
+    <br>
+    Pr
+    <br>
+    <span style="font-size: 10px;">Praseodymium</span>
+</td>
+
+<td class="Neodymium">
+    <span style="float: left;font-size: 10px;">60</span>
+    <span class="hsub" style="float: right;font-size: 10px;">144.24</span>
+    <br>
+    Nd
+    <br>
+    <span style="font-size: 10px;">Neodymium</span>
+</td>
+
+<td class="Promethium">
+    <span style="float: left;font-size: 10px;">61</span>
+    <span class="hsub" style="float: right;font-size: 10px;">145</span>
+    <br>
+    Pm
+    <br>
+    <span style="font-size: 10px;">Promethium</span>
+</td>
+
+<td class="Samarium">
+    <span style="float: left;font-size: 10px;">62</span>
+    <span class="hsub" style="float: right;font-size: 10px;">150.36</span>
+    <br>
+    Sm
+    <br>
+    <span style="font-size: 10px;">Samarium</span>
+</td>
+
+<td class="Europium">
+    <span style="float: left;font-size: 10px;">63</span>
+    <span class="hsub" style="float: right;font-size: 10px;">151.96</span>
+    <br>
+    Eu
+    <br>
+    <span style="font-size: 10px;">Europium</span>
+</td>
+
+<td class="Gadolinium">
+    <span style="float: left;font-size: 10px;">64</span>
+    <span class="hsub" style="float: right;font-size: 10px;">157.25</span>
+    <br>
+    Gd
+    <br>
+    <span style="font-size: 10px;">Gadolinium</span>
+</td>
+
+<td class="Terbium">
+    <span style="float: left;font-size: 10px;">65</span>
+    <span class="hsub" style="float: right;font-size: 10px;">158.93</span>
+    <br>
+    Tb
+    <br>
+    <span style="font-size: 10px;">Terbium</span>
+</td>
+
+<td class="Dysprosium">
+    <span style="float: left;font-size: 10px;">66</span>
+    <span class="hsub" style="float: right;font-size: 10px;">162.50</span>
+    <br>
+    Dy
+    <br>
+    <span style="font-size: 10px;">Dysprosium</span>
+</td>
+
+<td class="Holmium">
+    <span style="float: left;font-size: 10px;">67</span>
+    <span class="hsub" style="float: right;font-size: 10px;">164.93</span>
+    <br>
+    Ho
+    <br>
+    <span style="font-size: 10px;">Holmium</span>
+</td>
+
+<td class="Erbium">
+    <span style="float: left;font-size: 10px;">68</span>
+    <span class="hsub" style="float: right;font-size: 10px;">167.26</span>
+    <br>
+    Er
+    <br>
+    <span style="font-size: 10px;">Erbium</span>
+</td>
+
+<td class="Thulium">
+    <span style="float: left;font-size: 10px;">69</span>
+    <span class="hsub" style="float: right;font-size: 10px;">168.93</span>
+    <br>
+    Tm
+    <br>
+    <span style="font-size: 10px;">Thulium</span>
+</td>
+
+<td class="Ytterbium">
+    <span style="float: left;font-size: 10px;">70</span>
+    <span class="hsub" style="float: right;font-size: 10px;">173.05</span>
+    <br>
+    Yb
+    <br>
+    <span style="font-size: 10px;">Ytterbium</span>
+</td>
+
+<td class="Lutetium">
+    <span style="float: left;font-size: 10px;">71</span>
+    <span class="hsub" style="float: right;font-size: 10px;">174.97</span>
+    <br>
+    Lu
+    <br>
+    <span style="font-size: 10px;">Lutetium</span>
+</td>
+ </tr>
+<!-- section 9 end -->
+
+<!-- Section 10 -->
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td class="space"></td>
+<td class="Thorium">
+  <span style="float: left;font-size: 10px;">90</span>
+  <span class="hsub" style="float: right;font-size: 10px;">232.04</span>
+  <br>
+  Th
+  <br>
+  <span style="font-size: 10px;">Thorium
+  </span>
+</td>
+<td class="Protactinium">
+  <span style="float: left;font-size: 10px;">91</span>
+  <span class="hsub" style="float: right;font-size: 10px;">231.04</span>
+  <br>
+  Pa
+  <br>
+  <span style="font-size: 10px;">Protactinium</span>
+</td>
+
+<td class="Uranium">
+  <span style="float: left;font-size: 10px;">92</span>
+  <span class="hsub" style="float: right;font-size: 10px;">238.03</span>
+  <br>
+  U
+  <br>
+  <span style="font-size: 10px;">Uranium</span>
+</td>
+
+<td class="Neptunium">
+  <span style="float: left;font-size: 10px;">93</span>
+  <span class="hsub" style="float: right;font-size: 10px;">237</span>
+  <br>
+  Np
+  <br>
+  <span style="font-size: 10px;">Neptunium</span>
+</td>
+
+<td class="Plutonium">
+  <span style="float: left;font-size: 10px;">94</span>
+  <span class="hsub" style="float: right;font-size: 10px;">244</span>
+  <br>
+  Pu
+  <br>
+  <span style="font-size: 10px;">Plutonium</span>
+</td>
+
+<td class="Americium">
+  <span style="float: left;font-size: 10px;">95</span>
+  <span class="hsub" style="float: right;font-size: 10px;">243</span>
+  <br>
+  Am
+  <br>
+  <span style="font-size: 10px;">Americium</span>
+</td>
+
+<td class="Curium">
+  <span style="float: left;font-size: 10px;">96</span>
+  <span class="hsub" style="float: right;font-size: 10px;">247</span>
+  <br>
+  Cm
+  <br>
+  <span style="font-size: 10px;">Curium</span>
+</td>
+
+<td class="Berkelium">
+  <span style="float: left;font-size: 10px;">97</span>
+  <span class="hsub" style="float: right;font-size: 10px;">247</span>
+  <br>
+  Bk
+  <br>
+  <span style="font-size: 10px;">Berkelium</span>
+</td>
+
+<td class="Californium">
+  <span style="float: left;font-size: 10px;">98</span>
+  <span class="hsub" style="float: right;font-size: 10px;">251</span>
+  <br>
+  Cf
+  <br>
+  <span style="font-size: 10px;">Californium</span>
+</td>
+
+<td class="Einsteinium">
+  <span style="float: left;font-size: 10px;">99</span>
+  <span class="hsub" style="float: right;font-size: 10px;">252</span>
+  <br>
+  Es
+  <br>
+  <span style="font-size: 10px;">Einsteinium</span>
+</td>
+
+<td class="Fermium">
+  <span style="float: left;font-size: 10px;">100</span>
+  <span class="hsub" style="float: right;font-size: 10px;">257</span>
+  <br>
+  Fm
+  <br>
+  <span style="font-size: 10px;">Fermium</span>
+</td>
+
+<td class="Mendelevium">
+  <span style="float: left;font-size: 10px;">101</span>
+  <span class="hsub" style="float: right;font-size: 10px;">258</span>
+  <br>
+  Md
+  <br>
+  <span style="font-size: 10px;">Mendelevium</span>
+</td>
+
+<td class="Nobelium">
+  <span style="float: left;font-size: 10px;">102</span>
+  <span class="hsub" style="float: right;font-size: 10px;">259</span>
+  <br>
+  No
+  <br>
+  <span style="font-size: 10px;">Nobelium</span>
+</td>
+
+<td class="Lawrencium">
+  <span style="float: left;font-size: 10px;">103</span>
+  <span class="hsub" style="float: right;font-size: 10px;">262</span>
+  <br>
+  Lr
+  <br>
+  <span style="font-size: 10px;">Lawrencium</span>
+</td>
+</tr>
+<!-- section 10 end -->
+</tbody>
+
+</table>
+<div class="element-knows">
+  <div class="circle"></div><span>Alkali Metals</span>
+  <div class="circle-aem"></div><span>Alkaline Earth Metals</span>
+  <div class="circle-tm"></div><span>Transition Metals</span>
+  <div class="circle-ptm"></div><span>Post-Transition Metals</span>
+</div>
+<div class="element-knows">
+  <div class="circle-m"></div><span>Metalloids</span>
+  <div class="circle-rnm"></div><span>Reactive Non-Metals</span>
+  <div class="circle-ng"></div><span>Noble Gases</span>
+  <div class="circle-l"></div><span>Lanthanides</span>
+</div>
+<div class="element-knows">
+  <div class="circle-a"></div><span>Actinides</span>
+  <div class="circle-up"></div><span>Unknown properties</span>
+</div>
+<div style="padding-top: 10px;">
+<span>&copy; 2024 <a href="https://www.linkedin.com/in/syed-shahmir-zaidi-82050727a/" target="_blank">Syed Shahmir Zaidi</a>. All Rights Reserved.</span>
+<span style="float: right;">This Project Is A Clone Of Google Periodic Table <a href="https://www.google.com/search?q=periodic+table&sca_esv=bc957982f2bbd7ba&rlz=1C1KNTJ_enPK1020PK1020&sxsrf=ADLYWIJOePWdOE3Rh0XN1OC6ntPxBo-ESA%3A1729401740491&ei=jJMUZ9fMHdmC9u8PlJTCmQY&ved=0ahUKEwjXwqnDm5yJAxVZgf0HHRSKMGMQ4dUDCA8&uact=5&oq=periodic+table&gs_lp=Egxnd3Mtd2l6LXNlcnAiDnBlcmlvZGljIHRhYmxlSABQAFgAcAB4AZABAJgBAKABAKoBALgBA8gBAJgCAKACAJgDAJIHAKAHAA&sclient=gws-wiz-serp" target="_blank">Visit</a></span>
+</div>
+</body>
+</html>
